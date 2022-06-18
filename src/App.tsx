@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useLayoutEffect, useEffect, useState } from 'react';
+import { Reducer } from './pages/reducer';
 function App() {
+  const [state, setState] = useState(-1);
+  useEffect(() => {
+    setState(1);
+  }, []);
+  console.log('render');
+  // useLayoutEffect(() => {
+  //   console.log('父组件layout');
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>123</div>
+    </>
   );
 }
 
